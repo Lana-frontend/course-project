@@ -10,10 +10,10 @@ export class SmartSocetService {
     private readonly socetService: Repository<Socet>
   ) {}
 
-  async getInfo(): Promise<Socet> {
+  async getInfo(): Promise<Boolean> {
     const socet = await this.socetService.find()
 
-    return await socet[0];
+    return await socet[0].status;
   }
 
   async changeSocet(): Promise<String> {

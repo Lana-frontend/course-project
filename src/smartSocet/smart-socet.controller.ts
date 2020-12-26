@@ -11,7 +11,7 @@ export class SmartSocetController {
   ) {}
 
   @Get()
-  async getInformation(): Promise<Socet> {
+  async getInformation(): Promise<Boolean> {
     return await this.smartSocetService.getInfo();
   }
 
